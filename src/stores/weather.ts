@@ -62,16 +62,15 @@ export const useWeatherStore = defineStore('weather', () => {
 
   const fetchLocationByIp = async () => {
     try {
-      const ipRes = await fetch('http://ip-api.com/json/')
+      const ipRes = await fetch('https://ipapi.co/json/')
       const location = await ipRes.json()
-      if (location.status === 'fail') throw new Error('IP Location failed')
 
       const cityData: City = {
         name: location.city,
-        country: location.countryCode,
-        lat: location.lat,
-        lon: location.lon,
-        id: `local-${location.lat}-${location.lon}`,
+        country: location.country_code,
+        lat: location.latitude,
+        lon: location.longitude,
+        id: `local-${location.latitude}-${location.longitude}`,
         weather: {} as WeatherForecastData,
       }
 
