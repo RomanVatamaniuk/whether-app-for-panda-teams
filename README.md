@@ -20,11 +20,8 @@ A Vue 3 weather application with autocomplete city search using OpenWeatherMap A
 
 ### 2. Configure API Key
 
-Open `src/stores/weather.ts` and replace `YOUR_API_KEY_HERE` with your actual API key:
+Open `.env` and replace `VITE_OPENWEATHER_API_KEY` with your actual API key:
 
-```typescript
-const API_KEY = 'your_actual_api_key_here'
-```
 
 ### 3. Install Dependencies
 
