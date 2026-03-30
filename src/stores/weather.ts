@@ -15,7 +15,7 @@ export const useWeatherStore = defineStore('weather', () => {
   const weatherCache = new Map<string, WeatherData>()
   const { locale } = useI18n()
 
-  const API_KEY = 'd0c40c2057ae0edf8181fb6daff8fe6c'
+  const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY
 
   const getApiLang = () => (locale.value === 'uk' ? 'ua' : 'en')
 
