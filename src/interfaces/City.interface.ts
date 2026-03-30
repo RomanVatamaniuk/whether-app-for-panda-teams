@@ -1,7 +1,7 @@
 import type { WeatherForecastData } from './WeatherForecast.interface'
 
 export interface City {
-  id?: string
+  id: string
   name: string
   country: string
   state?: string
